@@ -8,6 +8,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app
 COPY . .
-#RUN composer install
+RUN composer install
 
 CMD ["sh", "-c", "php artisan serve --host=0.0.0.0", "&"]
